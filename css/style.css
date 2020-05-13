@@ -1,233 +1,218 @@
-
-body{
-    background-color: rgba(172, 33, 33, 0.945);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border:0;
+.body{
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* main container  */
-.container{
-    padding: 3px 3px;
-    border: black;
-    display: grid;
-    grid-gap: 1rem ;
-} 
-
-/* nav bar  */
-.navbar {
-    display: grid;
-    justify-content:center;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-    grid-gap: 0.5rem ;
-    text-align: center;
-    height: auto;
-    align-content: center;  
-    border: 1rem; 
+#container{
+    width: 390px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
 }
+/* navbar & items*/
 
-.navbar a {
+#navbar{
+    
+    background-color: whitesmoke;
+}
+.nav-items{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: .2rem;
+    align-content: center;    
+    
+}
+.nav-items a{
     text-decoration: none;
     font-weight: 600;
-    color:rgb(24, 21, 21);
+    font-size: x-large;
+    color: rgba(255, 255, 205, 0.7);
+    text-align: center;
+    padding: .5rem .5rem;
+    border-bottom: 5px;
+    background-color: rgba(83, 84, 88, 0.60);
+}
+
+.nav-items a:hover{
+    background-color: rgba(0, 0, 0, 0.288);
+    color: rgba(255, 255, 255, 1.00);
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
+/* banner section*/
+
+#banner {
+    background-image:linear-gradient(rgba(126, 135, 146, 0.3),rgba(126,135,146,.30)),url('/img/poster.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    margin-top: .5rem;
+    
+}
+#banner .text{
+    height: 200px;
+    text-align: center;
+}
+#banner .text h2{
+    margin:0 0 ;
+    font-weight: 600;
+    text-shadow: 1px 1px whitesmoke;
+}
+/* personal bio */
+#personal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    background-color:rgba(126,135,146,.20) ;
+    margin-top: .5rem;
+} 
+
+.pic{
+    text-align: center;
+    align-content: center;
+}
+
+.pic-round{
+    width: 15rem;
     display: block;
-    text-transform: uppercase;
-    background-color: beige;
-}
-.navbar a:hover {
-    background-color: black;
-    color: rgba(245, 245, 245, 0.788);
-}
-
-/* top image section */
-.poster {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: auto;
-}
-
-.poster h1{
-    background-color: rgba(245, 245, 220, 0.747);
-    font-style: oblique;
-    padding: 1rem 1rem;
-}
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-/* about button section */ 
-.about {
-    border-radius: 5px;
-    display: grid;
-    min-height: 300px;
-    grid-template-columns: 1fr 1fr;
-    background-color: beige;
-    border: black;
-    padding: 1rem;
-    grid-gap: 2rem;
-    grid-template-areas: 
-     'left-side right-side';    
-}
-.left-side {
-    grid-area:left-side ;
-    border-style: double;
-    padding: 8px 8px;
-    border-radius: 5px;
-}
-.left-side img{
-    max-width: 60%;
-    border-radius: 20px;
-}
-.left-side p{
-    text-align: justify;
-    background-color: lightgray;
-    width: 800px;
-    font-size: medium;
-    padding: 1rem 1rem; 
-}
-
-.right-side {
-    text-align: center;
-    border-style: double;
-    border-radius: 5px;
-    list-style: none;
-}
-.right-side h1{
-    text-transform: uppercase;
-    text-decoration: wavy;
-    text-decoration: underline;
-}
-
-.right-side h3 {
-    text-decoration: underline;
-}
-
-
-/*  his invetion */ 
-.invention {
-    background-color: beige;
-    border-radius: 5px;
-    text-align: justify;
-    padding: 1rem 1rem;
-}
-.invention h1,h2 {
-    text-decoration: underline;
-}
-.invention p{
-    border-style: dotted;
-    padding: 1rem 1rem;
-    background-color: lightgrey;
-}
-
-.nobel {
-    max-width: 100%;
-    border-radius: 5px;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(2,1fr);
-    background-color: beige;
-    padding: 1rem 1rem;
-    grid-template-areas: 
-    'history imgnobel';
-}
-
-/* history button section */
-
-.history {
-    grid-area: history;
-    text-align: justify;
-}
-.history p{
-    background-color: lightgray;
-    padding: 0.5rem 0.5rem ;
-}
-
-.imgnobel {
-    grid-area: imgnobel ;
-    justify-content: right;
-}
-
-.imgnobel img {
-    max-width: 50%;
+    border-radius: 50%;   
     position: relative;
-    right: -30%;
-    
+    left: 20%;
+    border: solid 5px white;
 }
-.imgnobel p{
+#personal .text{
+    padding: 0 .5rem;
+    font-size: 1.2rem;
+}
+/* quick info*/
+.quick-info{
+    margin-top: .5rem;
+    background-color:rgba(126,135,146,.20); 
+    list-style: none;
     text-align: center;
-    background-color: lightgray;
-    padding: 0.5rem 0.5rem;
+    padding-bottom: .5rem;
 }
 
-/* death button section*/
-
-.death {
-    border-radius: 5px;
-    background-color: beige;
-    padding: 1rem 1rem;
-    
+.quick-info h1 h3 li {
+    font-size: large;
+    font-weight: bolder;
 }
-.death p{
-    background-color: lightgrey;
-    padding: 0.5rem 0.5rem;
+/* invention style */
+#invention{
+    margin-top: .5rem;
+    background-color:rgba(126,135,146,.20);
     text-align: justify;
+    padding: .5rem .5rem;
+    font-size: 1.2rem;
 }
-
-/* footer section*/
-footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: rgba(151, 211, 151, 0.856);
-    border-radius: 5px;   
-}
-
-footer .text {
+#invention h2{
     text-align: center;
-    font-style: normal;
-    padding: 0.5rem 0.5rem;
-    font-weight: 300;
+}
+
+/* history section*/
+#history{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(126,135,146,.20);
+    margin-top: .5rem;
+    padding: 0 .5rem;
+    font-size: 1.2rem;
+}
+
+.prize-img{
+    width: 300px;
+    position: relative;
+    left: 10%;
+}
+.image P{
+    text-align: center;
+    font-size: 1.2rem;
+}
+/* death section*/
+
+#end{
+    background-color:rgba(126,135,146,.20);
+    margin-top: .5rem;
+    padding: 0 .5rem;
+    font-size: 1.2rem;
+}
+#end h1, #invention h1, #history h1 {
+    text-align: center;
+}
+/* footer & social links*/
+footer{
+    margin-top: .5rem ;
+    background-image: url('/img/cover_page.jpg');
+    border-bottom: .2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.social-links {
+    padding-bottom: 0.5rem;
+}
+.text a{
+    color: rgba(245, 245, 245, 0.60);
+}
+.text a:hover{
+    color: rgba(245, 245, 245, 0.90);
+}
+
+
+.social-links i{
+    color:rgba(245, 245, 245, 0.60);
+}
+.social-links i:hover{
+    color:rgba(245, 245, 245, 0.9);
+}
+
+
+/* reponsive behaviour for tablet */
+@media(min-width: 768px){
+    #container{
+        width: 700px;
+    }  
+    
+    .pic-round{
+        position: relative;
+        left: 30%;
+    }
+    #invention h2 {
+        text-align: center;
+    }
+    .prize-img{
+        position: relative;
+        left: 25%;
+    }
+
+}
+
+/* responsive behaviour for laptop*/
+
+@media(min-width: 900px){
+    #container{
+        width: 800px;
+    }
+    .pic-round{
+        position: relative;
+        left: 35%;
+    }
+    .prize-img{
+        position: relative;
+        left: 30%;
+    }    
+    #invention h2 {
+        text-align: center;
+    }
     
 }
 
-footer .social-links {
-    justify-items: center;
-    align-self: center;
-    background-color:wheat;
-}
 
-footer p{
-    font-size: 15px;
-    font-weight: 700;
-    text-align: center;
-}
 
-/* social links & others*/
-footer .social-links a:hover {
-    color: #00FFFF;    
-}
-
-footer .text a:hover {
-    color: #00FFFF;
-}
-footer .text a{
-    background-color: gray;
-    padding: 0.2rem 0.2rem;
-}
-
-/*media queries approx target device ipad */
-
-@media (max-width:768px) {
-    .navbar {
-        grid-template-columns: 1fr;
-    }
-    .about {
-        grid-template-areas: 
-        'left-side'
-        'right-side';
-    }    
-}
